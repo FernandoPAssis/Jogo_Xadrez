@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Xadrez Ultra-Leve</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Xadrez Ultra-Leve</h1>
+
+        <div class="controls">
+            <select id="modeSelect">
+                <option value="ai">Contra a Máquina</option>
+                <option value="pvp">2 Jogadores (Local)</option>
+            </select>
+
+            <select id="levelSelect">
+                <option value="1">Iniciante</option>
+                <option value="2" selected>Intermediário</option>
+                <option value="3">Avançado</option>
+                <option value="4">Expert</option>
+            </select>
+
+            <button id="restartBtn">Novo Jogo</button>
+            <button id="undoBtn">Desfazer</button>
+        </div>
+
+        <div class="captured-area">
+            <div id="capturedBlack"></div>
+            <div id="capturedWhite"></div>
+        </div>
+
+        <div class="board-wrapper">
+            <div id="board" class="board"></div>
+            <div id="overlay" class="overlay">
+                <h2 id="overlayText">Xeque-Mate!</h2>
+                <button onclick="initGame()">Jogar Novamente</button>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span id="turnText">Vez das Brancas</span>
+            <span id="thinkText" style="display: none; color: #ffca28;">Pensando...</span>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
